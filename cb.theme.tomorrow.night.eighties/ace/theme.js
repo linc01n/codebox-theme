@@ -1,5 +1,5 @@
 define([
-    "ace/theme.css"
+    "css!ace/theme.css"
 ], function(cssContent) {
 
     return {
