@@ -3,8 +3,8 @@ define([
 ], function(cssContent) {
 
     return {
-        'isDark': true,
-        'cssClass': "ace-tomorrow-night-eighties",
+        'isDark': false,
+        'cssClass': "ace-tomorrow",
         'cssText': cssContent
     }
 });

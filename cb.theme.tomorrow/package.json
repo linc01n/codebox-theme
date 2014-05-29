@@ -1,8 +1,8 @@
 {
-    "name": "cb.theme.tomorrow.night.eighties",
+    "name": "cb.theme.tomorrow",
     "version": "0.0.1",
-    "title": "Tomorrow Night Eighties Theme",
-    "description": "Tomorrow Night Eighties theme. Ported from ACE.",
+    "title": "Tomorrow Theme",
+    "description": "Tomorrow theme. Ported from ACE.",
     "homepage": "https://github.com/linc01n/codebox-theme",
     "license": "MIT",
     "author": {
