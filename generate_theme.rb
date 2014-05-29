@@ -62,9 +62,15 @@ Dir.glob('ace/lib/ace/theme/*.js') do |file|
 end
 
 # Patch textmate theme
-
 tm = File.open("cb.theme.textmate/ace/theme.js", "r").read
 tm.gsub!("ace-textmate", "ace-tm")
 File.open("cb.theme.textmate/ace/theme.js", "w") do |f|
     f.write(tm)
+end
+
+# Patch terminal theme
+term = File.open("cb.theme.terminal/ace/theme.js", "r").read
+term.gsub!("ace-terminal", "ace-terminal-theme")
+File.open("cb.theme.terminal/ace/theme.js", "w") do |f|
+    f.write(term)
 end

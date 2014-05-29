@@ -4,7 +4,7 @@ define([
 
     return {
         'isDark': true,
-        'cssClass': "ace-terminal",
+        'cssClass': "ace-terminal-theme",
         'cssText': cssContent
     }
 });
