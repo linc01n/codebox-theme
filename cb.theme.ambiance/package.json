@@ -1,0 +1,19 @@
+{
+    "name": "cb.theme.ambiance",
+    "version": "0.0.1",
+    "title": "Ambiance Theme",
+    "description": "Ambiance theme. Ported from ACE.",
+    "homepage": "https://github.com/linc01n/codebox-theme",
+    "license": "MIT",
+    "author": {
+        "name": "Lincoln Lee",
+        "email": "git@lincoln.hk",
+        "url": "https://github.com/linc01n/codebox-theme"
+    },
+    "client": {
+        "main": "main"
+    },
+    "engines": {
+        "codebox": ">=0.7.0"
+    }
+}
