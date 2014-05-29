@@ -4,7 +4,7 @@ define([
 
     return {
         'isDark': false,
-        'cssClass': "ace-textmate",
+        'cssClass': "ace-tm",
         'cssText': cssContent
     }
 });
