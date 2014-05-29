@@ -1,0 +1,19 @@
+{
+    "name": "cb.theme.crimson.editor",
+    "version": "0.0.1",
+    "title": "Crimson Editor Theme",
+    "description": "Crimson Editor theme. Ported from ACE.",
+    "homepage": "https://github.com/linc01n/codebox-theme",
+    "license": "MIT",
+    "author": {
+        "name": "Lincoln Lee",
+        "email": "git@lincoln.hk",
+        "url": "https://github.com/linc01n/codebox-theme"
+    },
+    "client": {
+        "main": "main"
+    },
+    "engines": {
+        "codebox": ">=0.7.0"
+    }
+}
