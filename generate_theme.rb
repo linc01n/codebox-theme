@@ -10,15 +10,16 @@ Dir.glob('ace/lib/ace/theme/*.js') do |file|
   title = theme_name.gsub('.', ' ').split(' ').map(&:capitalize).join(' ')
   package_name = 'cb.theme.' + theme_name
   id = theme_name
+  theme_dir = "ported-theme/" + package_name
   # Remove previous theme
-  FileUtils.rm_rf(package_name) if File.directory?(package_name)
+  FileUtils.rm_rf(theme_dir) if File.directory?(theme_dir)
 
   # Create theme directory
-  FileUtils.mkdir(package_name)
+  FileUtils.mkdir(theme_dir)
   # Create ace directory
-  FileUtils.mkdir(package_name + '/ace')
+  FileUtils.mkdir(theme_dir + '/ace')
   # Copy theme.css
-  FileUtils.cp "ace/lib/ace/theme/#{filename.to_s[0..-4]}.css", "#{package_name}/ace/theme.css"
+  FileUtils.cp "ace/lib/ace/theme/#{filename.to_s[0..-4]}.css", "#{theme_dir}/ace/theme.css"
 
   File.open(file, 'r') do |f|
     # White theme
@@ -37,7 +38,7 @@ Dir.glob('ace/lib/ace/theme/*.js') do |file|
     package_content = package_template.render(self, title: title, package_name: package_name)
 
     # Write package.json content
-    File.open(package_name + '/package.json', 'w') do |package|
+    File.open(theme_dir + '/package.json', 'w') do |package|
       package.write(package_content)
     end
 
@@ -46,7 +47,7 @@ Dir.glob('ace/lib/ace/theme/*.js') do |file|
     main_content = main_template.render(self, id: theme_name, title: title)
 
     # Write main.js content
-    File.open(package_name + '/main.js', 'w') do |main|
+    File.open(theme_dir + '/main.js', 'w') do |main|
       main.write(main_content)
     end
 
@@ -55,22 +56,22 @@ Dir.glob('ace/lib/ace/theme/*.js') do |file|
     theme_content = theme_template.render(self, css_name: id.gsub('.', '-'))
 
     # Write theme.js content
-    File.open(package_name + '/ace/theme.js', 'w') do |theme|
+    File.open(theme_dir + '/ace/theme.js', 'w') do |theme|
       theme.write(theme_content)
     end
   end
 end
 
 # Patch textmate theme
-tm = File.open("cb.theme.textmate/ace/theme.js", "r").read
+tm = File.open("ported-theme/cb.theme.textmate/ace/theme.js", "r").read
 tm.gsub!("ace-textmate", "ace-tm")
-File.open("cb.theme.textmate/ace/theme.js", "w") do |f|
+File.open("ported-theme/cb.theme.textmate/ace/theme.js", "w") do |f|
     f.write(tm)
 end
 
 # Patch terminal theme
-term = File.open("cb.theme.terminal/ace/theme.js", "r").read
+term = File.open("ported-theme/cb.theme.terminal/ace/theme.js", "r").read
 term.gsub!("ace-terminal", "ace-terminal-theme")
-File.open("cb.theme.terminal/ace/theme.js", "w") do |f|
+File.open("ported-theme/cb.theme.terminal/ace/theme.js", "w") do |f|
     f.write(term)
 end
