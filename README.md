@@ -9,8 +9,12 @@ Port Ace(Ajax.org Cloud9 Editor) themes to [codebox](https://github.com/FriendCo
 
 ## Usage
 
-`$ git clone https://github.com/linc01n/codebox-theme.git codebox-theme`
-`$ ruby generate_theme.rb`
+```bash
+$ git clone https://github.com/linc01n/codebox-theme.git codebox-theme
+$ cd codebox-theme
+$ bundle install
+$ ruby generate_theme.rb
+```
 
 ## Contributing
 
