@@ -4,7 +4,7 @@
     "title": "Github Theme",
     "description": "Github theme. Ported from ACE.",
     "homepage": "https://github.com/linc01n/codebox-theme",
-    "license": "MIT",
+    "license": "BSD",
     "author": {
         "name": "Lincoln Lee",
         "email": "git@lincoln.hk",
