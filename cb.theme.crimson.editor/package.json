@@ -2,7 +2,7 @@
     "name": "cb.theme.crimson.editor",
     "version": "0.0.1",
     "title": "Crimson Editor Theme",
-    "description": "Crimson Editor theme. Ported from ACE.",
+    "description": "Crimson Editor theme. Ported from Ace.",
     "homepage": "https://github.com/linc01n/codebox-theme",
     "license": "BSD",
     "author": {
