@@ -16,7 +16,7 @@ $ bundle install
 $ ruby generate_theme.rb
 ```
 
-The generated theme will be in `ported-theme` diretory
+The generated themes will be placed in `ported-theme` diretory
 
 ## Contributing
 
